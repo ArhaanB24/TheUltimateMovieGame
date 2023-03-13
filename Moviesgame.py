@@ -19,13 +19,17 @@ else:
         usernamelst.append(username)
     print("The players are {} ".format(",".join(usernamelst)))    
 def thegame():
-    Movies = open("D:\PROFILE BACKUP\Desktop\Python Projects/MoviesHindi.csv","r")
+    chc = input("Enter E for English and H for Hindi: ")
+    if chc.upper() == "E":
+        Movies = open(r"D:\PROFILE BACKUP\Desktop\Python Projects/EnglishMovies.csv","r")
+    elif chc.upper() == "H":
+        Movies = open(r"D:\PROFILE BACKUP\Desktop\Python Projects/MoviesHindi.csv","r")
     Movieslist = Movies.readlines()
     detailedlist = []
     for x in Movieslist:
         detailedlist.append(x.split(","))       
     listlength = random.randrange(1,len(detailedlist))
-    #print(detailedlist[listlength][0])  #developer access only
+    print(detailedlist[listlength][0])  #developer access only
     hints = {detailedlist[0][1] + ": ": detailedlist[listlength][1],(detailedlist[0][2]).strip("\n") + ": ": detailedlist[listlength][2].strip("\n")}
     randommovie = list(detailedlist[listlength][0]) 
     for x in range(len(randommovie)):
