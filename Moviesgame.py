@@ -29,7 +29,7 @@ def thegame():
     for x in Movieslist:
         detailedlist.append(x.split(","))       
     listlength = random.randrange(1,len(detailedlist))
-    print(detailedlist[listlength][0])  #developer access only
+    #print(detailedlist[listlength][0])  #developer access only
     hints = {detailedlist[0][1] + ": ": detailedlist[listlength][1],(detailedlist[0][2]).strip("\n") + ": ": detailedlist[listlength][2].strip("\n")}
     randommovie = list(detailedlist[listlength][0]) 
     for x in range(len(randommovie)):
