@@ -21,9 +21,9 @@ else:
 def thegame():
     chc = input("Enter E for English and H for Hindi: ")
     if chc.upper() == "E":
-        Movies = open(r"F:\TheUltimateMovieGame-main/EnglishMovies.csv","r")
+        Movies = open(r"EnglishMovies.csv","r")
     elif chc.upper() == "H":
-        Movies = open(r"F:\TheUltimateMovieGame-main/MoviesHindi.csv","r")
+        Movies = open(r"MoviesHindi.csv","r")
     Movieslist = Movies.readlines()
     detailedlist = []
     for x in Movieslist:
