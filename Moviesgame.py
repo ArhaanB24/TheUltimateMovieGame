@@ -21,9 +21,9 @@ else:
 def thegame():
     chc = input("Enter E for English and H for Hindi: ")
     if chc.upper() == "E":
-        Movies = open(r"EnglishMovies.csv","r")
+        Movies = open(r"F:\TheUltimateMovieGame-main/EnglishMovies.csv","r")
     elif chc.upper() == "H":
-        Movies = open(r"MoviesHindi.csv","r")
+        Movies = open(r"F:\TheUltimateMovieGame-main/MoviesHindi.csv","r")
     Movieslist = Movies.readlines()
     detailedlist = []
     for x in Movieslist:
@@ -41,7 +41,7 @@ def thegame():
     failedlist = []
     correctdict = {}
     blankspace = list(("_") * len(randommovie))
-    specialchars = ["-", " ", "?","=","&",":",";","!","'","(",")",".","1","2","3","4","5","6","7","8","9","0","@"]
+    specialchars = ["-", " ", "?","=","&",":",";","!","'","(",")",".","1","2","3","4","5","6","7","8","9","0","@","[","]","/"]
     for num,element in enumerate(randommovie):
         numele = num,element
         ind.append(numele)
@@ -61,7 +61,10 @@ def thegame():
             strlst = "".join(blankspace)
             correctdict[inpt] = 0    
         if inpt not in randommovie: 
-            if inpt in failedlist:
+            if len(inpt) > 1 or inpt in specialchars:
+                print("Enter Valid input")
+                break
+            elif inpt in failedlist:
                 print("You already guessed that!") 
                 break
             else:    
@@ -90,6 +93,7 @@ def thegame():
         print("***You Win***")
         score = 100
         return score  
+
 def gameloop():
     for x in range(len(usernamelst)):
         print(f"Currently playing: {usernamelst[x]}")
@@ -106,8 +110,6 @@ def gameloop():
             gameloop()
         else:
             print("Thank you for playing")
-            again = 1   
-            exit()
+            again = 1     
+            exit()  
 gameloop()
-
-
