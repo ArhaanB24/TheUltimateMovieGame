@@ -106,7 +106,8 @@ def gameloop():
             gameloop()
         else:
             print("Thank you for playing")
-            again = 1       
+            again = 1   
+            exit()
 gameloop()
 
 
