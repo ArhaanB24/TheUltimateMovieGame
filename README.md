@@ -34,12 +34,12 @@ Welcome to Movie Guesser 3000, a simple and entertaining Python console game whe
 
 - **EnglishMovies.csv:** Contains a list of English movies for the game.
 - **MoviesHindi.csv:** Contains a list of Hindi movies for the game.
-- **main.py:** The main Python script containing the game logic.
+- **Moviesgame.py:** The main Python script containing the game logic.
 
 ## How to Run
 
 1. Ensure you have Python installed on your machine.
-2. Execute the `main.py` script using a Python interpreter.
+2. Execute the `Moviesgame.py` script using a Python interpreter.
 
 ## Additional Notes
 
